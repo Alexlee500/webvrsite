@@ -10,16 +10,16 @@
     
     <a-scene>
       <a-assets>
-        <a-asset-item id="scene-obj" src="assets/cart.obj"></a-asset-item>
+        <a-asset-item id="scene-obj" src="/assets/cart.obj"></a-asset-item>
         <a-asset-item id="scene-mtl" src="assets/cart.mtl"></a-asset-item>
       </a-assets>
       
       
       
-      <a-entity obj-model="obj: #scene-obj; mtl: #scene-mtl"></a-entity>
+      <a-entity obj-model="obj: #scene-obj; mtl: #scene-mtl" position="0 -.25 -7" rotation="0 45 0"></a-entity>
       
       
-     <!red shrine thing>
+      <!red shrine thing>
       <a-entity position="0, -.25, -3" rotation="0, -45, 0">
         <a-box position="1.5 5 -3" height=".5" width= "4" depth=".25" rotation="0 0 0" color="#a50000" shadow></a-box>
         <a-box position="1.5 5.25 -3" height=".25" width= "4.5" depth=".25" rotation="0 0 0" color="#a50000" shadow></a-box>
@@ -65,7 +65,7 @@
       </a-entity>
       
       <!floor>
-      <a-plane position="0 0 -7" rotation="-90 0 0" width="10" height="10" color="#7BC8A4" shadow></a-plane>
+      <!a-plane position="0 0 -7" rotation="-90 0 0" width="10" height="10" color="#7BC8A4" shadow><!/a-plane>
       
       <a-sky color="#ECECEC"></a-sky>
     </a-scene>

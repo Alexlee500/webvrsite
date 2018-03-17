@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, WebVR! - A-Frame</title>
+    <meta name="description" content="Hello, WebVR! - A-Frame">
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+  </head>
+  <body>
+    
+    
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="scene-obj" src="https://cdn.glitch.com/750323fa-1766-4df8-ae20-f30feb970cf1%2FFinal_Scene_Dragon_Shop_By_Nive_II.obj?1521329111783"></a-asset-item>
+        <a-asset-item id="scene-mtl" src="https://cdn.glitch.com/750323fa-1766-4df8-ae20-f30feb970cf1%2FFinal_Scene_Dragon_Shop_By_Nive_II.mtl?1521329112744"></a-asset-item>
+      </a-assets>
+      
+      
+      
+      <a-entity obj-model="obj: #scene-obj; mtl: #scene-mtl"></a-entity>
+      
+      
+      <!red shrine thing>
+      <a-entity position="0, -.25, -3" rotation="0, -45, 0">
+        <a-box position="1.5 5 -3" height=".5" width= "4" depth=".25" rotation="0 0 0" color="#a50000" shadow></a-box>
+        <a-box position="1.5 5.25 -3" height=".25" width= "4.5" depth=".25" rotation="0 0 0" color="#a50000" shadow></a-box>
+        <a-box position="1.5 4 -3" height=".25" width= "3" depth=".25" rotation="0 0 0" color="#a50000" shadow></a-box>
+        <a-cylinder position="0 2.5 -3" radius="0.25" height="4.5" color="#a50000" shadow></a-cylinder>    
+        <a-cylinder position="3 2.5 -3" radius="0.25" height="4.5" color="#a50000" shadow></a-cylinder>    
+      </a-entity>
+      
+      <!tower things>
+      <a-entity position="0 0 -5" rotation="">
+        <a-cylinder position="0 0 0" height="0.1" radius="0.35"></a-cylinder>
+        <a-cylinder position="0 0.5 0" height="1" radius="0.1"></a-cylinder>
+        <a-cylinder position="0 1 0" height="0.5" radius="0.25"></a-cylinder>
+        <a-cone position="0 1.25 0" height=".3" radius-bottom=".45" radius-top="0.05"></a-cone>
+        <a-sphere position="0  1.4 0" radius=".1"></a-sphere>
+      </a-entity>
+      
+      <!tower things>
+      <a-entity position="-3 0 -5" rotation="">
+        <a-cylinder position="0 0 0" height="0.1" radius="0.35"></a-cylinder>
+        <a-cylinder position="0 0.5 0" height="1" radius="0.1"></a-cylinder>
+        <a-cylinder position="0 1 0" height="0.5" radius="0.25"></a-cylinder>
+        <a-cone position="0 1.25 0" height=".3" radius-bottom=".45" radius-top="0.05"></a-cone>
+        <a-sphere position="0  1.4 0" radius=".1"></a-sphere>
+      </a-entity>
+      
+      <!tower things>
+      <a-entity position="-3 0 -7" rotation="">
+        <a-cylinder position="0 0 0" height="0.1" radius="0.35"></a-cylinder>
+        <a-cylinder position="0 0.5 0" height="1" radius="0.1"></a-cylinder>
+        <a-cylinder position="0 1 0" height="0.5" radius="0.25"></a-cylinder>
+        <a-cone position="0 1.25 0" height=".3" radius-bottom=".45" radius-top="0.05"></a-cone>
+        <a-sphere position="0  1.4 0" radius=".1"></a-sphere>
+      </a-entity>
+      
+      <!tower things>
+      <a-entity position="0 0 -7" rotation="">
+        <a-cylinder position="0 0 0" height="0.1" radius="0.35"></a-cylinder>
+        <a-cylinder position="0 0.5 0" height="1" radius="0.1"></a-cylinder>
+        <a-cylinder position="0 1 0" height="0.5" radius="0.25"></a-cylinder>
+        <a-cone position="0 1.25 0" height=".3" radius-bottom=".45" radius-top="0.05"></a-cone>
+        <a-sphere position="0  1.4 0" radius=".1"></a-sphere>
+      </a-entity>
+      
+      <!floor>
+      <a-plane position="0 0 -7" rotation="-90 0 0" width="10" height="10" color="#7BC8A4" shadow></a-plane>
+      
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
+</html>

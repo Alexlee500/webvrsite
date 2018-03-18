@@ -8,20 +8,28 @@
   <body>
     
     
-    <a-scene fog="type: exponential; color: #AAA; density: .1" >
+    <a-scene fog="type: exponential; color: #AAA; density: .1">
       <a-assets>
-        <a-asset-item id="cart-obj" src="assets/Shrine Final.obj"></a-asset-item>
-        <a-asset-item id="cart-mtl" src="assets/Shrine Final.mtl"></a-asset-item>
+        <a-asset-item id="cart-obj" src="assets/Final_assets/cart.obj"></a-asset-item>
+        <a-asset-item id="cart-mtl" src="assets/Final_assets/cart.mtl"></a-asset-item>
         
-        <a-asset-item id="plant-obj" src="assets/plant_fixed_textureready.obj"></a-asset-item>
-        <a-asset-item id="plant-mtl" src="assets/plant_2.mtl"></a-asset-item>
+        <a-asset-item id="plant-obj" src="assets/Final_assets/plant.obj"></a-asset-item>
+        <a-asset-item id="plant-mtl" src="assets/Final_assets//plant.mtl"></a-asset-item>
+        
+        <a-asset-item id="ghostlady-mtl" src="assets/Final_assets/ghost.mtl"></a-asset-item>
+        <a-asset-item id="ghostlady-obj" src="assets/Final_assets/ghost.obj"></a-asset-item>
+        
+        <a-asset-item id="water-mtl" src="assets/Final_assets/water.mtl"></a-asset-item>
+        <a-asset-item id="water-obj" src="assets/Final_assets/water.obj"></a-asset-item>
+        
+        <img id="glowyball" src="https://cdn.glitch.com/6e59e619-54fe-4b63-91e6-412af2747ce4%2Forbs.png?1521398989905">
         
         <!img id="sky" src="https://cdn.glitch.com/750323fa-1766-4df8-ae20-f30feb970cf1%2FFantasia%20v3.jpg?1521332602834">
       </a-assets>
       
-      
-      <a-sky src="#sky"></a-sky>
       <a-entity obj-model="obj: #cart-obj; mtl: #cart-mtl" position="0 -.25 -7" rotation="0 45 0"></a-entity>
+      <a-entity obj-model="obj: #ghostlady-obj; mtl: #ghostlady-mtl" position="-2 0 -6" rotation= "0 90 0"></a-entity> 
+      <a-entity obj-model="obj: #water-obj; mtl: #water-mtl" position="0 2 0" scale=".005 .005 .005"></a-entity>
       
       <!Carrot>
       <a-entity obj-model="obj: #plant-obj; mtl: #plant-mtl" scale=".25 .25 .25" position="-3 -.25 -3" rotation="0 90 0">
@@ -29,8 +37,13 @@
               direction="alternate"
               repeat="indefinite"
               dur="7000"
-              from="-7 -.25 -3"
+              from="-8 -.25 -3"
               to="7 -.25 -3"></a-animation>
+        <a-animation attribute="rotation"
+               dur="7000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite"></a-animation>
       </a-entity>
       
       <!Carrot2>
@@ -41,9 +54,29 @@
               repeat="indefinite"
               dur="8500"
               from="9 -.25 -7"
-              to="-6 -.25 -7"></a-animation>
+              to="-7 -.25 -7"></a-animation>
+        <a-animation attribute="rotation"
+               dur="8500"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite"></a-animation>
       </a-entity>
       
+      <!Carrot3>
+      <a-entity obj-model="obj: #plant-obj; mtl: #plant-mtl" scale=".25 .25 .25" position="-3 -.25 3" rotation="0 90 0">
+       <a-animation attribute="position"
+              begin="1500"
+              direction="alternate"
+              repeat="indefinite"
+              dur="8500"
+              from="0 -.25 -10"
+              to="-2 -.25 0"></a-animation>
+        <a-animation attribute="rotation"
+               dur="8500"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite"></a-animation>
+      </a-entity>
       
       <!red shrine thing>
       <a-entity position="-3, -.25, -1" rotation="0, 25, 0">
@@ -55,7 +88,7 @@
       </a-entity>
       
       <!tower things>
-      <a-entity position="3 0 -5" rotation="">
+      <a-entity position="3 -.25 -5" rotation="">
         <a-cylinder position="0 0 0" height="0.1" radius="0.35" color="#939292"></a-cylinder>
         <a-cylinder position="0 0.5 0" height="1" radius="0.1" color="#939292"></a-cylinder>
         <a-cylinder position="0 1 0" height="0.5" radius="0.25" color="#ffe1aa"></a-cylinder>
@@ -64,7 +97,7 @@
       </a-entity>
       
       <!tower things>
-      <a-entity position="-3 0 -5" rotation="">
+      <a-entity position="-3 -.25 -5.35" rotation="">
         <a-cylinder position="0 0 0" height="0.1" radius="0.35" color="#939292"></a-cylinder>
         <a-cylinder position="0 0.5 0" height="1" radius="0.1" color="#939292"></a-cylinder>
         <a-cylinder position="0 1 0" height="0.5" radius="0.25" color="#ffe1aa"></a-cylinder>
@@ -73,7 +106,7 @@
       </a-entity>
       
       <!tower things>
-      <a-entity position="-2 0 -7" rotation="">
+      <a-entity position="-3 -.25 -7" rotation="">
         <a-cylinder position="0 0 0" height="0.1" radius="0.35" color="#939292"></a-cylinder>
         <a-cylinder position="0 0.5 0" height="1" radius="0.1" color="#939292"></a-cylinder>
         <a-cylinder position="0 1 0" height="0.5" radius="0.25" color="#ffe1aa"></a-cylinder>
@@ -82,17 +115,14 @@
       </a-entity>
       
       <!tower things>
-      <a-entity position="2 0 -7" rotation="">
+      <a-entity position="2 -.25 -7" rotation="">
         <a-cylinder position="0 0 0" height="0.1" radius="0.35" color="#939292"></a-cylinder>
         <a-cylinder position="0 0.5 0" height="1" radius="0.1" color="#939292"></a-cylinder>
         <a-cylinder position="0 1 0" height="0.5" radius="0.25" color="#ffe1aa"></a-cylinder>
         <a-cone position="0 1.25 0" height=".3" radius-bottom=".45" radius-top="0.05" color="#6b0b0b"></a-cone>
         <a-sphere position="0  1.4 0" radius=".1" color="#b29400"></a-sphere>
       </a-entity>
-      
-      <!floor>
-      <!a-plane position="0 0 -7" rotation="-90 0 0" width="10" height="10" color="#7BC8A4" shadow><!/a-plane>
-    
+
     </a-scene>
   </body>
 </html>

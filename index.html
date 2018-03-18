@@ -8,15 +8,41 @@
   <body>
     
     
-    <a-scene>
+    <a-scene fog="type: exponential; color: #AAA; density: .1" >
       <a-assets>
-        <a-asset-item id="scene-obj" src="assets/cart.obj"></a-asset-item>
-        <a-asset-item id="scene-mtl" src="assets/cart.mtl"></a-asset-item>
+        <a-asset-item id="cart-obj" src="assets/cart.obj"></a-asset-item>
+        <a-asset-item id="cart-mtl" src="assets/cart.mtl"></a-asset-item>
+        
+        <a-asset-item id="plant-obj" src="assets/plant.obj"></a-asset-item>
+        <a-asset-item id="plant-mtl" src="asset/plant.mtl"></a-asset-item>
+        
+        <img id="sky" src="https://cdn.glitch.com/750323fa-1766-4df8-ae20-f30feb970cf1%2FFantasia%20v3.jpg?1521332602834">
       </a-assets>
       
       
+      <a-sky src="#sky"></a-sky>
+      <a-entity obj-model="obj: #cart-obj; mtl: #cart-mtl" position="0 -.25 -7" rotation="0 45 0"></a-entity>
       
-      <a-entity obj-model="obj: #scene-obj; mtl: #scene-mtl" position="0 -.25 -7" rotation="0 45 0"></a-entity>
+      <!Carrot>
+      <a-entity obj-model="obj: #plant-obj; mtl: #plant-mtl" scale=".25 .25 .25" position="-3 -.25 -3" rotation="0 90 0">
+       <a-animation attribute="position"
+              direction="alternate"
+              repeat="indefinite"
+              dur="7000"
+              from="-7 -.25 -3"
+              to="7 -.25 -3"></a-animation>
+      </a-entity>
+      
+      <!Carrot2>
+      <a-entity obj-model="obj: #plant-obj; mtl: #plant-mtl" scale=".25 .25 .25" position="-3 -.25 3" rotation="0 90 0">
+       <a-animation attribute="position"
+              begin="1500"
+              direction="alternate"
+              repeat="indefinite"
+              dur="8500"
+              from="9 -.25 -7"
+              to="-6 -.25 -7"></a-animation>
+      </a-entity>
       
       
       <!red shrine thing>
@@ -30,44 +56,43 @@
       
       <!tower things>
       <a-entity position="1 0 -5" rotation="">
-        <a-cylinder position="0 0 0" height="0.1" radius="0.35"></a-cylinder>
-        <a-cylinder position="0 0.5 0" height="1" radius="0.1"></a-cylinder>
-        <a-cylinder position="0 1 0" height="0.5" radius="0.25"></a-cylinder>
-        <a-cone position="0 1.25 0" height=".3" radius-bottom=".45" radius-top="0.05"></a-cone>
-        <a-sphere position="0  1.4 0" radius=".1"></a-sphere>
+        <a-cylinder position="0 0 0" height="0.1" radius="0.35" color="#939292"></a-cylinder>
+        <a-cylinder position="0 0.5 0" height="1" radius="0.1" color="#939292"></a-cylinder>
+        <a-cylinder position="0 1 0" height="0.5" radius="0.25" color="#ffe1aa"></a-cylinder>
+        <a-cone position="0 1.25 0" height=".3" radius-bottom=".45" radius-top="0.05" color="#6b0b0b"></a-cone>
+        <a-sphere position="0  1.4 0" radius=".1" color="#b29400"></a-sphere>
       </a-entity>
       
       <!tower things>
       <a-entity position="-3 0 -5" rotation="">
-        <a-cylinder position="0 0 0" height="0.1" radius="0.35"></a-cylinder>
-        <a-cylinder position="0 0.5 0" height="1" radius="0.1"></a-cylinder>
-        <a-cylinder position="0 1 0" height="0.5" radius="0.25"></a-cylinder>
-        <a-cone position="0 1.25 0" height=".3" radius-bottom=".45" radius-top="0.05"></a-cone>
-        <a-sphere position="0  1.4 0" radius=".1"></a-sphere>
+        <a-cylinder position="0 0 0" height="0.1" radius="0.35" color="#939292"></a-cylinder>
+        <a-cylinder position="0 0.5 0" height="1" radius="0.1" color="#939292"></a-cylinder>
+        <a-cylinder position="0 1 0" height="0.5" radius="0.25" color="#ffe1aa"></a-cylinder>
+        <a-cone position="0 1.25 0" height=".3" radius-bottom=".45" radius-top="0.05" color="#6b0b0b"></a-cone>
+        <a-sphere position="0  1.4 0" radius=".1" color="#b29400"></a-sphere>
       </a-entity>
       
       <!tower things>
       <a-entity position="-2 0 -7" rotation="">
-        <a-cylinder position="0 0 0" height="0.1" radius="0.35"></a-cylinder>
-        <a-cylinder position="0 0.5 0" height="1" radius="0.1"></a-cylinder>
-        <a-cylinder position="0 1 0" height="0.5" radius="0.25"></a-cylinder>
-        <a-cone position="0 1.25 0" height=".3" radius-bottom=".45" radius-top="0.05"></a-cone>
-        <a-sphere position="0  1.4 0" radius=".1"></a-sphere>
+        <a-cylinder position="0 0 0" height="0.1" radius="0.35" color="#939292"></a-cylinder>
+        <a-cylinder position="0 0.5 0" height="1" radius="0.1" color="#939292"></a-cylinder>
+        <a-cylinder position="0 1 0" height="0.5" radius="0.25" color="#ffe1aa"></a-cylinder>
+        <a-cone position="0 1.25 0" height=".3" radius-bottom=".45" radius-top="0.05" color="#6b0b0b"></a-cone>
+        <a-sphere position="0  1.4 0" radius=".1" color="#b29400"></a-sphere>
       </a-entity>
       
       <!tower things>
       <a-entity position="2 0 -7" rotation="">
-        <a-cylinder position="0 0 0" height="0.1" radius="0.35"></a-cylinder>
-        <a-cylinder position="0 0.5 0" height="1" radius="0.1"></a-cylinder>
-        <a-cylinder position="0 1 0" height="0.5" radius="0.25"></a-cylinder>
-        <a-cone position="0 1.25 0" height=".3" radius-bottom=".45" radius-top="0.05"></a-cone>
-        <a-sphere position="0  1.4 0" radius=".1"></a-sphere>
+        <a-cylinder position="0 0 0" height="0.1" radius="0.35" color="#939292"></a-cylinder>
+        <a-cylinder position="0 0.5 0" height="1" radius="0.1" color="#939292"></a-cylinder>
+        <a-cylinder position="0 1 0" height="0.5" radius="0.25" color="#ffe1aa"></a-cylinder>
+        <a-cone position="0 1.25 0" height=".3" radius-bottom=".45" radius-top="0.05" color="#6b0b0b"></a-cone>
+        <a-sphere position="0  1.4 0" radius=".1" color="#b29400"></a-sphere>
       </a-entity>
       
       <!floor>
       <!a-plane position="0 0 -7" rotation="-90 0 0" width="10" height="10" color="#7BC8A4" shadow><!/a-plane>
-      
-      <a-sky color="#ECECEC"></a-sky>
+    
     </a-scene>
   </body>
 </html>

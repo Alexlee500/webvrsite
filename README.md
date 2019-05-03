@@ -10,6 +10,7 @@ Vina Kong
 Vinakong@gmail.com
 
 WebVr Website using A-Frame for Auteurist Webvr Hackathon
+https://alexlee500.github.io/webvrsite/
 
 
 used assets:
